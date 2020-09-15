@@ -23,7 +23,7 @@ end
 puts ""
 puts "--- Women store generating less than $1M anually ---"
 #get all the womens only stores that generates less than $1M in sales
-@womens_stores = Store.where("womens_apparel = :id1 AND annual_revenue > :id2", 
+@womens_stores = Store.where("womens_apparel = :id1 AND annual_revenue < :id2", 
 {id1: true, id2: 1000000})
 
 @womens_stores.each do |store| 
